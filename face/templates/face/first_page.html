@@ -1,0 +1,34 @@
+<div align='center'>
+    <div>
+<h1>SAUFR group Welcomes you</h1>
+</div>
+<a href="admin/">admin</a>
+<a href="{% url 'home' %}">faculty</a>      
+
+<br/>
+<br/>
+
+<form method="POST" action="create_dataset/">
+    {% csrf_token %}
+       
+        
+        <label for="Skey"> Enter_ID</label>
+        <input type="text" name="Skey" placeholder="Enter_ID"/>  
+  
+        <label for="name"> Enter_Name</label>
+        <input type="text" name="name" placeholder="Enter_Name"/>  
+
+        <br/>
+        <br/>
+        <div>
+            <button type="submit" class="btn btn-warning">TakeImage</button>
+        </div>
+</form>
+
+<form action="trainer/">
+  {% csrf_token %}
+    <div>
+        <button type="submit" class="btn btn-warning">Train_Images</button>
+    </div>
+</form>
+
